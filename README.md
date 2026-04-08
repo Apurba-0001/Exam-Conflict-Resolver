@@ -3,9 +3,6 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.8%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
   <img src="https://img.shields.io/badge/Flask-Web%20App-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask" />
-  <img src="https://img.shields.io/github/last-commit/Apurba-0001/Exam-Conflict-Resolver?style=for-the-badge" alt="Last Commit" />
-  <img src="https://img.shields.io/github/repo-size/Apurba-0001/Exam-Conflict-Resolver?style=for-the-badge" alt="Repo Size" />
-  <img src="https://img.shields.io/github/issues/Apurba-0001/Exam-Conflict-Resolver?style=for-the-badge" alt="Issues" />
 </p>
 
 <p align="center">
