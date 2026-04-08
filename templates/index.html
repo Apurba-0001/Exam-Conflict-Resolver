@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>🎓 Exam Conflict Resolver</title>
+    <link rel="stylesheet" href="/static/style.css?v=6">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="particles"></div>
+    
+    <div class="hero">
+        <h1 class="logo">🎓 Exam conflict Resolver</h1>
+        <p class="subtitle">Smartly resolve exam conflicts with scheduling ✨</p>
+    </div>
+
+    <div class="glass container">
+        <!-- College Time -->
+        <div class="section">
+            <h2>⏰ College Timings</h2>
+            <div class="row timings">
+                <div class="box neon">
+                    <label>College Start</label>
+                    <input id="collegeStart" type="time">
+                </div>
+                <div class="box neon">
+                    <label>College End</label>
+                    <input id="collegeEnd" type="time">
+                </div>
+            </div>
+        </div>
+
+        <!-- Exam Inputs -->
+        <div class="section">
+            <h2>📚 Add Exam</h2>
+            <div class="row inputs">
+                <div class="box neon"><label>Subject</label><input id="subject"></div>
+                <div class="box neon"><label>Date</label><input id="date" type="date"></div>
+                <div class="box neon"><label>Start</label><input id="start" type="time"></div>
+                <div class="box neon"><label>End</label><input id="end" type="time"></div>
+                <div class="box neon"><label>Room</label><input id="room"></div>
+                <div class="box neon"><label>Building</label><input id="building"></div>
+                <div class="box add-btn">
+                    <button class="add-exam-btn" onclick="addExam()">➕ Add Exam</button>
+                </div>
+                <div class="box csv-btn">
+                    <input type="file" id="csvFile" accept=".csv" style="display: none;">
+                    <button type="button" class="add-exam-btn csv-upload-btn" onclick="document.getElementById('csvFile').click()">📁 Upload CSV</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>📋 Current Exams <span id="examCount">0</span></h3>
+            <div class="table-container">
+                <table id="examTable"></table>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button class="resolve-btn" onclick="resolveConflicts()">
+                <span class="btn-text">✨ Resolve Conflicts</span>
+                <div class="spinner" id="resolveSpinner"></div>
+            </button>
+        </div>
+
+        <div class="section result-section" id="resultSection" style="display: none;">
+            <h3>✅ Resolved Timetable</h3>
+            <div class="table-container">
+                <table id="resultTable"></table>
+            </div>
+            <button class="print-btn" onclick="printTimetable()">🖨️ Print Schedule</button>
+        </div>
+    </div>
+
+    <script src="/static/script.js?v=6"></script>
+</body>
+</html>
+
