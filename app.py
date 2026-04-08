@@ -8,7 +8,6 @@ def parse_time(t):
     return datetime.strptime(t, "%H:%M")
 
 def times_overlap(t1start, t1end, t2start, t2end):
-    """Check if two time intervals overlap. Times in HH:MM 24h format."""
     t1s = int(t1start.replace(':', ''))
     t1e = int(t1end.replace(':', ''))
     t2s = int(t2start.replace(':', ''))
@@ -22,7 +21,8 @@ def generate_slots(start, end, duration):
 
     while start_time + timedelta(hours=duration) <= end_time:
         slot_end = start_time + timedelta(hours=duration)
-        slots.append(start_time.strftime("%I:%M %p") + "-" + slot_end.strftime("%I:%M %p"))
+        slots.append(start_time.strftime("%I:%M %p") + "-"
+                      + slot_end.strftime("%I:%M %p"))
         start_time += timedelta(hours=duration)
 
     return slots
