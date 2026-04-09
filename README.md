@@ -241,6 +241,3 @@ http://127.0.0.1:5000
 - Add OpenAPI/Swagger documentation
 - Add resolved schedule export as PDF/CSV
 
-## License
-
-No license file is currently present. Add a LICENSE file to define usage and distribution terms.
